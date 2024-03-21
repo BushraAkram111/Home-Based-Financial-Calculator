@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Based Financial Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    
+
+    h1 {
+        background-color: blue;
+        color: white;
+        padding: 10px; /* Optional: Add padding for better visual */
+    }
+
+        .frame {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .expense-item {
+            margin-bottom: 10px;
+        }
+
+        .expense-item label,
+        .expense-item input,
+        .expense-item select {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .expense-item label {
+            width: 150px;
+            margin-right: 10px;
+        }
+
+        .expense-item input,
+        .expense-item select {
+            width: 100px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Home-Based Financial Calculator</h1>
+
+    <div class="frame">
+        <h2>Income</h2>
+        <label>Total Salary</label>
+        <input type="text" id="total_salary">
+        <label>Earned Income & Pension</label>
+        <input type="text" id="earned_income_pension">
+    </div>
+
+    <div class="frame" id="expenses-frame">
+        <h2>Expenses</h2>
+        <div id="expenses-container">
+            <div class="expense-item">
+                <label>Rent</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+
+            <!-- Add other expenses here -->
+            <div class="expense-item">
+                <label>Bills</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Mortgage</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Tax</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Home Maintenance</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Loan</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Living Expenses (Grocery)</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Household Supplies</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Shopping</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Self-Investment</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Healthcare (Medical Spending/Insurance)</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Children & Education</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Emergency Fund & Other</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Gifts & Donations</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Hobbies & Sports</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Travel & Vacation</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div class="expense-item">
+                <label>Other Spending</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+
+            <div class="expense-item" id="total-expenses-item" style="display: none;">
+                <label>Total Expenses</label>
+                <input type="text" id="total_expenses" readonly>
+            </div>
+        </div>
+        <button onclick="addExpenseField()">Add Expense</button>
+        <button onclick="calculateExpenses()">Calculate Expenses</button>
+    </div>
+
+    <div class="frame">
+        <h2>Savings</h2>
+        <label>Total Savings</label>
+        <input type="text" id="total_savings" readonly>
+    </div>
+
+    <button onclick="calculateBudget()">Calculate</button>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="generateReport()">Generate Report</button>
+
+    <script>
+        function addExpenseField() {
+            var expensesContainer = document.getElementById("expenses-container");
+            var newExpenseItem = document.createElement("div");
+            newExpenseItem.className = "expense-item";
+    
+            // Add a new expense input field
+            newExpenseItem.innerHTML = `
+                <label>New Expense</label>
+                <input type="text" class="expense-amount">
+                <select class="expense-frequency">
+                    <option value="Monthly" selected>Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            `;
+    
+            expensesContainer.insertBefore(newExpenseItem, document.getElementById("total-expenses-item"));
+        }
+    
+        function calculateExpenses() {
+            var expenseItems = document.querySelectorAll('.expense-amount');
+            var totalExpenses = 0;
+    
+            expenseItems.forEach(function (expense) {
+                totalExpenses += parseFloat(expense.value) || 0;
+            });
+    
+            // Update Total Expenses field
+            document.getElementById('total_expenses').value = totalExpenses.toFixed(2);
+            document.getElementById('total-expenses-item').style.display = 'block';
+        }
+    
+        function calculateBudget() {
+            var totalSalary = parseFloat(document.getElementById('total_salary').value) || 0;
+            var earnedIncomePension = parseFloat(document.getElementById('earned_income_pension').value) || 0;
+            var totalExpenses = parseFloat(document.getElementById('total_expenses').value) || 0;
+    
+            // Calculate Total Savings
+            var totalSavings = (totalSalary + earnedIncomePension) - totalExpenses;
+    
+            // Update Total Savings field
+            document.getElementById('total_savings').value = totalSavings.toFixed(2);
+        }
+    
+        // Assume you have a JavaScript function to remove expense fields
+        function removeExpenseField() {
+            // Add logic to dynamically remove expense fields
+        }
+    
+        function saveData() {
+            // Implement JavaScript logic for saving data
+        }
+    
+        function generateReport() {
+            var totalSalary = parseFloat(document.getElementById('total_salary').value) || 0;
+            var earnedIncomePension = parseFloat(document.getElementById('earned_income_pension').value) || 0;
+            var totalExpenses = parseFloat(document.getElementById('total_expenses').value) || 0;
+    
+            // Calculate Total Savings
+            var totalSavings = (totalSalary + earnedIncomePension) - totalExpenses;
+    
+            // Fetch frequency value
+            var frequency = document.querySelector('.expense-frequency').value;
+    
+            // Display the report
+            alert("Financial Report:\n\nTotal Salary: $" + totalSalary.toFixed(2) +
+                "\nEarned Income & Pension: $" + earnedIncomePension.toFixed(2) +
+                "\nTotal Expenses: $" + totalExpenses.toFixed(2) +
+                "\nTotal Savings: $" + totalSavings.toFixed(2) +
+                "\nYour Financial Report: " + frequency);
+        }
+    </script>
+    
+</body>
+</html>
